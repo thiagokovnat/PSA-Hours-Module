@@ -9,6 +9,7 @@ public class Hours {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private Long taskId;
     private Integer quantity;
     private final Date date;
     private final Integer responsibleResourceID;
@@ -24,6 +25,14 @@ public class Hours {
     public Hours(){
         this.date = null;
         this.responsibleResourceID = null;
+    }
+
+    public void setTaskId(Long taskId){
+        this.taskId = taskId;
+    }
+
+    public Long getTaskId(){
+        return this.taskId;
     }
 
     public Long getID() {
